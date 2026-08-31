@@ -134,9 +134,11 @@
             </div>
 
             <!-- Pagination -->
-            <div class="p-4 border-t border-[#16325c]">
-                {{ $projects->links() }}
-            </div>
+            @if(method_exists($projects, 'links') && $projects->hasPages())
+                <div class="p-4 border-t border-[#16325c]">
+                    {{ $projects->links() }}
+                </div>
+            @endif
         @else
             <div class="p-12 text-center text-slate-400 space-y-3">
                 <p class="font-bold text-sm">No land projects found.</p>

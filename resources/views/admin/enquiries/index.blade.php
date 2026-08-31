@@ -140,9 +140,11 @@
             </tbody>
         </table>
 
-        <div class="p-4 border-t border-[#16325c]">
-            {{ $enquiries->links() }}
-        </div>
+        @if(method_exists($enquiries, 'links') && $enquiries->hasPages())
+            <div class="p-4 border-t border-[#16325c]">
+                {{ $enquiries->links() }}
+            </div>
+        @endif
     </div>
 </div>
 @endsection

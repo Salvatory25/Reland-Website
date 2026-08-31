@@ -70,9 +70,11 @@
             @endforelse
         </div>
 
-        <div class="mt-12">
-            {{ $articles->links() }}
-        </div>
+        @if(method_exists($articles, 'links') && $articles->hasPages())
+            <div class="mt-12">
+                {{ $articles->links() }}
+            </div>
+        @endif
 
     </div>
 </div>

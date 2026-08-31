@@ -21,12 +21,12 @@ foreach ($storagePaths as $path) {
 $dbSource = __DIR__ . '/../database/database.sqlite';
 $dbTarget = '/tmp/database.sqlite';
 
-if (!file_exists($dbTarget) || filesize($dbTarget) === 0) {
-    if (file_exists($dbSource) && filesize($dbSource) > 0) {
+if (file_exists($dbSource) && filesize($dbSource) > 0) {
+    if (!file_exists($dbTarget) || filesize($dbTarget) < filesize($dbSource) || filemtime($dbSource) > filemtime($dbTarget)) {
         @copy($dbSource, $dbTarget);
-    } else {
-        @touch($dbTarget);
     }
+} elseif (!file_exists($dbTarget)) {
+    @touch($dbTarget);
 }
 
 // 3. Fallback Static File Handler (Ensures CSS/JS/Assets always load)

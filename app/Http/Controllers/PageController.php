@@ -36,12 +36,10 @@ class PageController extends Controller
 
     public function insights(): View
     {
-        $articles = collect();
-
         try {
             $articles = \App\Models\Article::latest('published_at')->paginate(9);
         } catch (\Throwable $e) {
-            // DB offline fallback
+            $articles = new \Illuminate\Pagination\LengthAwarePaginator([], 0, 9);
         }
 
         return view('public.pages.insights', compact('articles'));

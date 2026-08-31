@@ -168,9 +168,11 @@
                 </div>
 
                 <!-- Pagination -->
-                <div class="mt-10">
-                    {{ $plots->links() }}
-                </div>
+                @if(method_exists($plots, 'links') && $plots->hasPages())
+                    <div class="mt-10">
+                        {{ $plots->links() }}
+                    </div>
+                @endif
             @else
                 <!-- No Results State -->
                 <div class="bg-white rounded-3xl border border-slate-200 p-12 text-center space-y-4">

@@ -175,9 +175,11 @@
             </table>
         </div>
 
-        <div class="p-4 border-t border-[#16325c]">
-            {{ $plots->links() }}
-        </div>
+        @if(method_exists($plots, 'links') && $plots->hasPages())
+            <div class="p-4 border-t border-[#16325c]">
+                {{ $plots->links() }}
+            </div>
+        @endif
     </div>
 </div>
 @endsection

@@ -48,9 +48,11 @@
             @endforeach
         </div>
 
-        <div class="mt-10">
-            {{ $plots->links() }}
-        </div>
+        @if(method_exists($plots, 'links') && $plots->hasPages())
+            <div class="mt-10">
+                {{ $plots->links() }}
+            </div>
+        @endif
     @else
         <div class="bg-white rounded-3xl border border-slate-200 p-12 text-center space-y-4">
             <p class="text-slate-500 text-sm">No plots currently listed in {{ $location->area_name }}. Contact us to request unlisted private parcels.</p>

@@ -105,9 +105,11 @@
         </div>
 
         <!-- Pagination -->
-        <div class="mt-12">
-            {{ $projects->links() }}
-        </div>
+        @if(method_exists($projects, 'links') && $projects->hasPages())
+            <div class="mt-12">
+                {{ $projects->links() }}
+            </div>
+        @endif
     @else
         <div class="p-12 bg-white rounded-3xl border border-slate-200 text-center space-y-3">
             <h3 class="text-lg font-bold text-slate-700">{{ $isSw ? 'Hakuna miradi iliyopatikana' : 'No Projects Found' }}</h3>
