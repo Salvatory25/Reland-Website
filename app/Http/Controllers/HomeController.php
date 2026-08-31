@@ -23,6 +23,7 @@ class HomeController extends Controller
         $popularLocations = collect();
         $plotTypes = collect();
         $locations = collect();
+        $featuredArticles = collect();
 
         try {
             // Featured Land Projects (Surveying, Formalization, Subdivisions)
@@ -62,6 +63,8 @@ class HomeController extends Controller
                 ->get();
 
             $locations = Location::orderBy('area_name')->get();
+
+            $featuredArticles = \App\Models\Article::latest('published_at')->take(3)->get();
         } catch (\Throwable $e) {
             // DB is offline or not configured yet on Vercel
         }
@@ -82,6 +85,7 @@ class HomeController extends Controller
             'popularLocations',
             'plotTypes',
             'locations',
+            'featuredArticles',
             'stats'
         ));
     }

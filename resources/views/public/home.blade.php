@@ -575,6 +575,67 @@
 </section>
 
 
+<!-- 6.5. BLOG: MAKALA & ELIMU YA ARDHI -->
+@if(isset($featuredArticles) && $featuredArticles->count() > 0)
+<section class="py-20 bg-white border-t border-slate-100">
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fbf6ea] text-[#16325c] text-xs font-extrabold tracking-wider uppercase border border-[#f5e9c9]">
+                    {{ app()->getLocale() === 'sw' ? 'Elimu ya Ardhi & Miongozo' : 'Land Knowledge & Guides' }}
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#16325c] tracking-tight mt-2">
+                    {{ app()->getLocale() === 'sw' ? 'Blog: Makala & Elimu ya Ardhi' : 'Blog: Land Insights & Guides' }}
+                </h2>
+                <p class="text-sm text-slate-600 mt-1 max-w-2xl">
+                    {{ app()->getLocale() === 'sw' ? 'Gundua miongozo, ushauri, na taarifa muhimu zinazokusaidia kufanya maamuzi sahihi kuhusu umiliki na uwekezaji wa ardhi Tanzania.' : 'Discover expert guides, advice, and essential information to help you make informed decisions about land ownership and investment in Tanzania.' }}
+                </p>
+            </div>
+            <a href="{{ route('pages.insights') }}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#16325c] hover:bg-[#0c1c34] text-white font-bold text-xs transition shadow-md">
+                <span>{{ app()->getLocale() === 'sw' ? 'Soma Makala Zote' : 'Explore All Articles' }}</span>
+                <svg class="w-4 h-4 text-[#dfb256]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @foreach($featuredArticles as $article)
+                <a href="{{ route('pages.article', $article->slug) }}" data-tilt data-tilt-max="8" data-tilt-glare="true" class="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-xs hover:shadow-2xl hover:border-[#c89a3b]/40 transition duration-300 flex flex-col h-full preserve-3d">
+                    <div class="aspect-[16/10] bg-slate-200 relative overflow-hidden">
+                        @if($article->image_url)
+                            <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        @else
+                            <div class="w-full h-full bg-[#16325c] flex items-center justify-center">
+                                <svg class="w-12 h-12 text-[#16325c]/30" fill="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
+                        @endif
+                        <div class="absolute top-4 left-4 translate-z-10">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur text-[#16325c] text-xs font-bold rounded-lg shadow-sm">
+                                {{ $article->published_at ? $article->published_at->format('M d, Y') : 'Recent' }}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 sm:p-8 flex flex-col flex-1 translate-z-10">
+                        <h3 class="text-lg font-bold text-slate-800 mb-3 group-hover:text-[#c89a3b] transition line-clamp-2">
+                            {{ $article->title }}
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-6 flex-1 line-clamp-3 leading-relaxed">
+                            {{ $article->excerpt }}
+                        </p>
+                        
+                        <div class="pt-4 border-t border-slate-200/80 flex items-center text-[#16325c] font-bold text-xs group-hover:text-[#c89a3b] transition mt-auto">
+                            <span>{{ app()->getLocale() === 'sw' ? 'Soma Zaidi' : 'Read Article' }}</span>
+                            <svg class="w-3.5 h-3.5 ml-2 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+    </div>
+</section>
+@endif
+
+
 <!-- 7. FREQUENTLY ASKED QUESTIONS (FAQ) -->
 <section class="py-20 bg-slate-50">
     <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
