@@ -103,7 +103,7 @@ class RelandSeeder extends Seeder
                 'ward' => 'Njiro',
                 'area_name' => 'Njiro',
                 'slug' => 'njiro-arusha-city',
-                'featured_image' => 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80',
+                'featured_image' => 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
                 'description' => 'Arusha’s most prestigious residential suburb with top international schools, shopping malls, tarmac accessibility, and serene green surroundings.',
                 'is_popular' => true,
                 'display_order' => 1,
@@ -213,14 +213,14 @@ class RelandSeeder extends Seeder
                 'latitude' => -3.402150,
                 'longitude' => 36.705820,
                 'google_maps_embed_url' => 'https://maps.google.com/maps?q=-3.402150,36.705820&z=15&output=embed',
-                'featured_image' => 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+                'featured_image' => 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
                 'is_featured' => true,
                 'is_published' => true,
                 'views_count' => 342,
                 'gallery' => [
+                    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
                     'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-                    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-                    'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+                    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
                 ]
             ],
             [
@@ -250,13 +250,13 @@ class RelandSeeder extends Seeder
                 'latitude' => -3.376510,
                 'longitude' => 36.602140,
                 'google_maps_embed_url' => 'https://maps.google.com/maps?q=-3.376510,36.602140&z=15&output=embed',
-                'featured_image' => 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
+                'featured_image' => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
                 'is_featured' => true,
                 'is_published' => true,
                 'views_count' => 518,
                 'gallery' => [
+                    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
                     'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
-                    'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
                     'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
                 ]
             ],

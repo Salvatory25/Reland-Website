@@ -31,6 +31,7 @@ class ProjectSeeder extends Seeder
                 'gallery' => [
                     'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
                     'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80',
+                    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
                 ]
             ],
             [
@@ -47,10 +48,11 @@ class ProjectSeeder extends Seeder
                 'completion_date' => '2025-11-20',
                 'latitude' => -3.3768000,
                 'longitude' => 36.5984000,
-                'featured_image' => 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+                'featured_image' => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
                 'is_featured' => true,
                 'is_published' => true,
                 'gallery' => [
+                    'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
                     'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
                 ]
             ],
@@ -68,11 +70,12 @@ class ProjectSeeder extends Seeder
                 'completion_date' => '2025-08-10',
                 'latitude' => -3.3512000,
                 'longitude' => 36.6789000,
-                'featured_image' => 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80',
+                'featured_image' => 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
                 'is_featured' => true,
                 'is_published' => true,
                 'gallery' => [
                     'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',
+                    'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
                 ]
             ],
             [
@@ -93,6 +96,7 @@ class ProjectSeeder extends Seeder
                 'is_featured' => true,
                 'is_published' => true,
                 'gallery' => [
+                    'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=1200&q=80',
                     'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
                 ]
             ],
@@ -110,10 +114,12 @@ class ProjectSeeder extends Seeder
                 'completion_date' => '2025-06-18',
                 'latitude' => -3.3910000,
                 'longitude' => 36.7320000,
-                'featured_image' => 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',
+                'featured_image' => 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80',
                 'is_featured' => false,
                 'is_published' => true,
-                'gallery' => []
+                'gallery' => [
+                    'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+                ]
             ]
         ];
 
